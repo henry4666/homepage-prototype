@@ -50,24 +50,22 @@ body main {
     align-items: baseline;
 }
 
-.typed {
+#typed {
     margin-left: 2.5rem;
     display: inline-block;
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
-    animation:
-      blinking .75s infinite;
     width: 0;
 }
 
-#into {
+.in {
     animation: 
       typing 1.5s steps(18, end) forwards,
       blinking .75s infinite;
 }
 
-#out {
+.out {
     animation: 
       backspace 1.5s steps(18, end) forwards,
       blinking .75s infinite;
