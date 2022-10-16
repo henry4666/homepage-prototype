@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+    font-size: 90px;
+}
+
+body main {
+    margin: 80px 80px 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.greet {
+    font-size: 120px;
+    margin-bottom: 4rem;
+}
+
+.hero span {}
+
+.circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid yellow;
+}
