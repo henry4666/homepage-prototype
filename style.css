@@ -1,3 +1,12 @@
+.color-pallet {
+    background-color: #011638;
+    color: #B0A3FF;
+    color: #2E294E;
+    color: #39E6E6;
+    color: #FFFF26;
+    color: #E622E6;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -6,6 +15,11 @@ body {
     justify-content: center;
     font-family: monospace, Arial, Helvetica, sans-serif;
     font-size: 90px;
+}
+
+body {
+    background: #011638;
+    color: #B0A3FF;
 }
 
 body main {
@@ -19,12 +33,14 @@ body main {
     margin-bottom: 4rem;
 }
 
-.hero span {}
+.hero span {
+    color: #FFFF26;
+}
 
 .circle {
     position: absolute;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 5px solid yellow;
+    border: 6px solid #FFFF26;
 }
