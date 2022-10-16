@@ -1,10 +1,10 @@
-#color-pallet {
-    background-color: #011638;
-    color: #B0A3FF;
-    color: #2E294E;
-    color: #39E6E6;
-    color: #FFFF26;
-    color: #E622E6;
+:root {
+  --bg-color: #011638;
+  --light: #B0A3FF;
+  --dark: #2E294E;
+  --cyan: #39E6E6;
+  --yellow: #FFFF26;
+  --magenta: #E622E6;
 }
 
 body {
@@ -18,8 +18,8 @@ body {
 }
 
 body {
-    background: #011638;
-    color: #B0A3FF;
+    background: var(--bg-color);
+    color: var(--light);
 }
 
 body main {
@@ -33,8 +33,20 @@ body main {
     margin-bottom: 4rem;
 }
 
-.hero span {
-    color: #FFFF26;
+.loop-color1 {
+  --loopColor: var(--yellow);
+}
+
+.loop-color2 {
+  --loopColor: var(--magenta);
+}
+
+.loop-color3 {
+  --loopColor: var(--cyan);
+}
+
+.title-color {
+    color: var(--loopColor);
 }
 
 .circle {
@@ -42,7 +54,7 @@ body main {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 6px solid #FFFF26;
+    border: 6px solid var(--loopColor);
 }
 
 .c2 {
@@ -54,7 +66,7 @@ body main {
     margin-left: 2.5rem;
     display: inline-block;
     overflow: hidden;
-    border-right: .15em solid #B0A3FF;
+    border-right: .15em solid var(--light);
     white-space: nowrap;
     width: 0;
 }
@@ -81,5 +93,5 @@ body main {
 }
 @keyframes blinking {
   from { border-color: transparent; }
-  to { border-color: #B0A3FF; }
+  to { border-color: var(--light); }
 }
