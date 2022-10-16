@@ -61,22 +61,22 @@ body main {
 
 .in {
     animation: 
-      typing 1.5s steps(18, end) forwards,
+      typing 1.5s steps(22, end) forwards,
       blinking .75s infinite;
 }
 
 .out {
     animation: 
-      backspace 1.5s steps(18, end) forwards,
+      backspace 1.5s steps(22, end) forwards,
       blinking .75s infinite;
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 500px }
+  to { width: 550px }
 }
 @keyframes backspace {
-  from { width: 500px }
+  from { width: 550px }
   to { width: 0 }
 }
 @keyframes blinking {

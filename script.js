@@ -10,4 +10,4 @@ function typeTextAnimation(txt) {
   txt.classList.replace("out", "in");
 };
 
-// setTimeout(typing(), 6000);
+function fullAnimation(txt) {}
