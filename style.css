@@ -1,4 +1,4 @@
-.color-pallet {
+#color-pallet {
     background-color: #011638;
     color: #B0A3FF;
     color: #2E294E;
@@ -43,4 +43,45 @@ body main {
     height: 60px;
     border-radius: 50%;
     border: 6px solid #FFFF26;
+}
+
+.c2 {
+    display: flex;
+    align-items: baseline;
+}
+
+.typed {
+    margin-left: 2.5rem;
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation:
+      blinking .75s infinite;
+    width: 0;
+}
+
+#into {
+    animation: 
+      typing 1.5s steps(18, end) forwards,
+      blinking .75s infinite;
+}
+
+#out {
+    animation: 
+      backspace 1.5s steps(18, end) forwards,
+      blinking .75s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 500px }
+}
+@keyframes backspace {
+  from { width: 500px }
+  to { width: 0 }
+}
+@keyframes blinking {
+  from { border-color: transparent }
+  to { border-color: orange; }
 }
