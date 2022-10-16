@@ -1,4 +1,4 @@
 # homepage-prototype
 prototype for portfolio homepage
 
-### Progress: Typewriter animation complete function
+### Progress: Text/Color changing animation working
