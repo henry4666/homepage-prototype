@@ -1,6 +1,6 @@
 :root {
-  --bg-dark: #000;
-  --bg-color: #011638;
+  --bg-dark: #E8E1EF;
+  --bg-color: #454545;
   --light: #fff;
   --dark: #2E294E;
   --cyan: #39E6E6;
@@ -20,11 +20,12 @@ body {
   justify-content: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 90px;
-}
-
-body {
   background: var(--bg-dark);
   color: var(--light);
+}
+
+a {
+  text-decoration: none;
 }
 
 body main {
@@ -34,6 +35,7 @@ body main {
   flex-direction: column;
   background-color: var(--bg-color);
   border-radius: 38px;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 2);
 }
 
 .greet {
@@ -63,16 +65,30 @@ body main {
   color: var(--loopColor);
 }
 
+.icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  mask-size: cover;
+}
+
+.icon:hover,
+.icon:focus {
+  fill: var(--loopColor);
+  transition: 0.6s;
+}
+
 #shape {
   position: absolute;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   border: 6px solid var(--loopColor);
+  transition: 0.6s;
 }
 
 #typed {
-  margin-left: 2.5rem;
+  margin-left: 1.5rem;
   display: inline-block;
   overflow: hidden;
   border-right: .15em solid var(--light);

@@ -5,7 +5,8 @@ let initDuration = 3*seconds;
 const animationDelay = 1.5*seconds;
 const typed = document.querySelector("#typed");
 const shape = document.querySelector("#shape");
-const titleText = ["Engineer.", "Designer.", "Developer."];
+const icons = [document.querySelector("#icon1"), document.querySelector("#icon2"), document.querySelector("#icon3")];
+const titleText = ["an Engineer.", "a Designer.", "a Developer."];
 const loopCSSColors = ["loop-color1", "loop-color2", "loop-color3"];
 
 function deleteTextAnimation(txt) {
@@ -16,9 +17,8 @@ function typeTextAnimation(txt) {
   txt.classList.replace("out", "in");
 };
 
-function colorShift(txt, circle, color, i) {
-  txt.classList.replace(color[i-1], color[i]);
-  circle.classList.replace(color[i-1], color[i]);
+function colorShift(item, color, i) {
+  item.classList.replace(color[i-1], color[i]);
 };
 
 function textShift(newTxt) {
@@ -35,7 +35,11 @@ function animationLoop() {
 
     setTimeout( ()=> {
       textShift(titleText[i]);
-      colorShift(typed, shape, loopCSSColors, i);
+      colorShift(typed, loopCSSColors, i);
+      colorShift(shape, loopCSSColors, i);
+      colorShift(icons[0], loopCSSColors, i);
+      colorShift(icons[1], loopCSSColors, i);
+      colorShift(icons[2], loopCSSColors, i);
     }, initDuration + animationDelay);
 
     setTimeout( ()=> {typeTextAnimation(typed)}, initDuration + animationDelay + 0.1*seconds);
