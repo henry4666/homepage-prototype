@@ -46,7 +46,7 @@ body main {
 .hero {
   display: flex;
   align-items: baseline;
-  margin-bottom: 4.5rem;
+  margin-bottom: 7rem;
 }
 
 .loop-color1 {
@@ -65,17 +65,31 @@ body main {
   color: var(--loopColor);
 }
 
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
 .icon {
-  display: inline-block;
+  display: flex;
   width: 50px;
   height: 50px;
   mask-size: cover;
 }
 
+
 .icon:hover,
 .icon:focus {
   fill: var(--loopColor);
   transition: 0.6s;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 10%;
+  margin-left: auto;
 }
 
 #shape {
