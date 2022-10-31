@@ -96,9 +96,10 @@ body main {
   position: absolute;
   width: 60px;
   height: 60px;
+  transform: translate(-50%,-50%);
   border-radius: 50%;
-  border: 6px solid var(--loopColor);
-  transition: 0.6s;
+  border: 3px solid var(--loopColor);
+  transition: border-color 0.6s;
 }
 
 #typed {

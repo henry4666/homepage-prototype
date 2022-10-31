@@ -9,6 +9,13 @@ const icons = [document.querySelector("#icon1"), document.querySelector("#icon2"
 const titleText = ["an Engineer.", "a Designer.", "a Developer."];
 const loopCSSColors = ["loop-color1", "loop-color2", "loop-color3"];
 
+const onMouseMove = (e) =>{
+  shape.style.left = e.pageX + 'px';
+  shape.style.top = e.pageY + 'px';
+};
+
+document.addEventListener('mousemove', onMouseMove)
+
 function deleteTextAnimation(txt) {
   txt.classList.replace("in", "out");
 };
