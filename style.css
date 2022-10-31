@@ -26,6 +26,7 @@ body {
 
 a {
   text-decoration: none;
+  pointer-events: auto;
 }
 
 body main {
@@ -51,14 +52,23 @@ body main {
 
 .loop-color1 {
   --loopColor: var(--yellow);
+
+  /* for the shape transition: */
+  --radius: 10%;
 }
 
 .loop-color2 {
   --loopColor: var(--magenta);
+
+  /* for the shape transition: */
+  --radius: 30%;
 }
 
 .loop-color3 {
   --loopColor: var(--cyan);
+
+  /* for the shape transition: */
+  --radius: 50%;
 }
 
 .title-color {
@@ -96,10 +106,11 @@ body main {
   position: absolute;
   width: 60px;
   height: 60px;
-  transform: translate(-50%,-50%);
-  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius);
   border: 3px solid var(--loopColor);
-  transition: border-color 0.6s;
+  transition: border-color 0.6s, border-radius 1s cubic-bezier(.18,.89,.32,1.28);
+  pointer-events: none;
 }
 
 #typed {
@@ -121,6 +132,19 @@ body main {
   animation:
     backspace 1.5s steps(22, end) forwards,
     blinking .75s infinite;
+}
+
+.rotate {
+  animation: rotation 4s 4 ease;
+}
+
+@keyframes rotation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
 }
 
 @keyframes typing {
